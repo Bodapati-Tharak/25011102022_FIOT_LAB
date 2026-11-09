@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"wemos\startup_stm32f103xb.o"
+"wemos\main.o"
+"wemos\stm32f1xx_it.o"
+"wemos\stm32f1xx_hal_msp.o"
+"wemos\stm32f1xx_hal_gpio_ex.o"
+"wemos\stm32f1xx_hal_uart.o"
+"wemos\stm32f1xx_hal.o"
+"wemos\stm32f1xx_hal_rcc.o"
+"wemos\stm32f1xx_hal_rcc_ex.o"
+"wemos\stm32f1xx_hal_gpio.o"
+"wemos\stm32f1xx_hal_dma.o"
+"wemos\stm32f1xx_hal_cortex.o"
+"wemos\stm32f1xx_hal_pwr.o"
+"wemos\stm32f1xx_hal_flash.o"
+"wemos\stm32f1xx_hal_flash_ex.o"
+"wemos\stm32f1xx_hal_exti.o"
+"wemos\system_stm32f1xx.o"
+--strict --scatter "wemos\wemos.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "wemos.map" -o wemos\wemos.axf
